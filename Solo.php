@@ -1,6 +1,6 @@
 <?php
 
-class Flocker {
+class Solo {
 	private $fp;
 	private $token;
 

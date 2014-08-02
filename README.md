@@ -3,17 +3,17 @@ Solo
 
 Atomic script locker - ensure that ONLY a single instance of your script (cronjob) run at a time.
 
-Flocker will only work on scripts you run from the command line.
+Solo will only work on scripts you run from the command line.
 
 ## Usage ##
 
 Your cronjob will look like.
 
 ```php
-require 'Flocker.php';
+require 'Solo.php';
 
 //setup
-$lock = new Flocker('my-lock-name');
+$lock = new Solo('my-lock-name');
 
 //check if already running
 if (!$lock->isLocked()) die('Already running.');
@@ -21,6 +21,8 @@ if (!$lock->isLocked()) die('Already running.');
 // do the work
 echo "Working!\n";
 sleep(15);
+
+//no clean-up required
 
 ```
 
