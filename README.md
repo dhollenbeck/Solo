@@ -1,7 +1,7 @@
 Solo
 =======
 
-Atomic script locker - ensure that ONLY a single instance of your script (cronjob) run at a time.
+Atomic script locker - ensure that ONLY a single instance of your script (cronjob) runs at a time.
 
 Solo will only work on scripts you run from the command line.
 
@@ -19,7 +19,7 @@ $lock = new Solo('my-lock-name');
 if (!$lock->isLocked()) die('Already running.');
 
 // do the work
-echo "Working!\n";
+echo "Working!";
 sleep(15);
 
 //no clean-up required
